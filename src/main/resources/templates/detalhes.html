@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pr-br">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,30 +17,13 @@
   </nav>
 
   <main class="container">
-    <h1>Lista de Diaristas</h1>
-  
-    <table class="table">
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>Nome</th>
-          <th>Telefone</th>
-          <th>Endereço</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr th:each="diarista : ${diaristas}">
-          <td th:text="${diarista.id}"></td>
-          <td>
-            <a th:href="@{/diaristas/{id} (id=${diarista.id})}" th:text="${diarista.nome}"></a>
-          </td>
-          <td th:text="${diarista.telefone}"></td>
-          <td th:text="${diarista.endereco}"></td>
-        </tr>
-      </tbody>
-    </table>
-  </main>
+    <h1>Detalhes do Diarista</h1>
 
+    <p>Nome: <span th:text="${diarista.nome}"></span></p>
+    <p>Telefone: <span th:text="${diarista.telefone}"></span></p>
+    <p>Endereço: <span th:text="${diarista.endereco}"></span></p>
+  </main>
+  
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 </body>
 </html>
